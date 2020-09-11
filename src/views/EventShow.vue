@@ -25,20 +25,13 @@
     </div>
 </template>
 <script>
-import { mapState, mapActions } from 'vuex'
-
 export default {
-  props: ['id'],
-  computed: mapState({
-    event: state => state.event.event
-  }),
-  created() {
-    // this.$store.dispatch('event/getEvent', {
-    //   id: this.id
-    // })
-    this.getEvent({ id: this.id })
-  },
-  methods: mapActions('event', ['getEvent'])
+  props: {
+    event: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 <style scoped>

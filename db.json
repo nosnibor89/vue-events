@@ -147,6 +147,28 @@
       "date": "2020-08-09T02:08:00.000Z",
       "time": "3:00",
       "attendees": []
+    },
+    {
+      "id": 742259,
+      "user": {
+        "user": {
+          "id": "abc123",
+          "name": "Robinson"
+        }
+      },
+      "category": "aws",
+      "organizer": {
+        "user": {
+          "id": "abc123",
+          "name": "Robinson"
+        }
+      },
+      "title": "AWSOME",
+      "description": "AWSOME",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }

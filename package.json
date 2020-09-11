@@ -6,12 +6,13 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "serve-be": "json-server db.json",
+    "serve-be": "json-server db.json -d 3000",
     "start:dev": "npm run serve-be && npm run serve",
     "s:d": "npm run start:dev"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "nprogress": "^0.2.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuejs-datepicker": "^1.6.2",
