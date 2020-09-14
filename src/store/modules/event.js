@@ -59,23 +59,12 @@ export const actions = {
   async getEvent({ commit, getters, dispatch }, { id }) {
     let event = getters.getEventById(id)
     if (!event) {
-      try {
-        dispatch('setLoading', true)
-        const { data } = await EventService.getEvent(id)
-        event = data
-      } catch (error) {
-        const notification = {
-          type: 'error',
-          message: 'There was a problem fetching the event:' + error.message
-        }
-
-        dispatch('notification/add', notification, { root: true })
-        console.log('There was an error:', error.response)
-      } finally {
-        dispatch('setLoading', false)
-        commit(SET_EVENT, event)
-      }
+      dispatch('setLoading', true)
+      const { data } = await EventService.getEvent(id)
+      event = data
+      dispatch('setLoading', false)
     }
+    commit(SET_EVENT, event)
     return event
   },
   setLoading({ commit }, isLoading) {

@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "serve-be": "json-server db.json -d 3000",
+    "serve-be": "json-server db.json",
+    "serve-be-slow": "json-server db.json -d 3000",
     "start:dev": "npm run serve-be && npm run serve",
     "s:d": "npm run start:dev"
   },
