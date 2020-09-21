@@ -169,6 +169,28 @@
       "date": "",
       "time": "",
       "attendees": []
+    },
+    {
+      "id": 509323,
+      "user": {
+        "user": {
+          "id": "abc123",
+          "name": "Robinson"
+        }
+      },
+      "category": "",
+      "organizer": {
+        "user": {
+          "id": "abc123",
+          "name": "Robinson"
+        }
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
