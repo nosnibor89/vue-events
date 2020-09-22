@@ -1,8 +1,11 @@
 <template>
     <div class="field">
         <label v-if="label">{{label}}</label>
-        <select @input="$emit('input', $event.target.value)"
-                v-bind="$attrs">
+        <select @change="updateValue"
+                v-bind="$attrs"
+                v-on="$listeners"
+                :class="selectClass">
+            <option value="" :selected="'' === value">Select an option</option>
             <option v-for="option in options" :key="option" :selected="option === value">{{ option }}</option>
         </select>
     </div>
@@ -19,8 +22,16 @@ export default {
     label: {
       type: String
     },
+    selectClass: {
+      type: String
+    },
     value: {
       type: [String, Number]
+    }
+  },
+  methods: {
+    updateValue($event) {
+      this.$emit('input', $event.target.value)
     }
   }
 }

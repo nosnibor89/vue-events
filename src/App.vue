@@ -100,9 +100,16 @@ small {
 .-text-base {
   color: #000;
 }
-.-text-error {
+.-text-error,
+.errorMessage,
+.error {
   color: tomato;
 }
+
+.error {
+  border-color: tomato;
+}
+
 .-text-gray {
   color: rgba(0, 0, 0, 0.5);
 }
