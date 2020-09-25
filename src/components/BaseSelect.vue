@@ -12,26 +12,17 @@
 </template>
 
 <script>
+import BaseFormFieldMixin from '@/mixins/BaseFormFieldMixin'
+
 export default {
-  inheritAttrs: false,
+  mixins: [BaseFormFieldMixin],
   props: {
     options: {
       type: Array,
       required: true
     },
-    label: {
-      type: String
-    },
     selectClass: {
       type: String
-    },
-    value: {
-      type: [String, Number]
-    }
-  },
-  methods: {
-    updateValue($event) {
-      this.$emit('input', $event.target.value)
     }
   }
 }

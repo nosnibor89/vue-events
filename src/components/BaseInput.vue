@@ -10,19 +10,13 @@
 </template>
 
 <script>
+import BaseFormFieldMixin from '@/mixins/BaseFormFieldMixin'
+
 export default {
-  inheritAttrs: false,
+  mixins: [BaseFormFieldMixin],
   props: {
-    label: {
-      type: String
-    },
     inputClass: {
       type: String
-    }
-  },
-  methods: {
-    updateValue($event) {
-      this.$emit('input', $event.target.value)
     }
   },
   computed: {
